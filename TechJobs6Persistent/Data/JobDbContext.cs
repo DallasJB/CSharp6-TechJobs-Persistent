@@ -29,7 +29,7 @@ namespace TechJobs6Persistent.Data
             modelBuilder.Entity<Job>()
             .HasMany(s => s.Skills)
             .WithMany(j => j.Jobs)
-            .UsingEntity(j => j.ToTable("JobTags"));
+            .UsingEntity(j => j.ToTable("JobSkills"));
         }
     }
 }
